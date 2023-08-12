@@ -1,0 +1,22 @@
+.circle {
+    position: fixed;
+    top: -50vmin;
+    left: -50vmin;
+    height: 90vmin;
+    width: 90vmin;
+    background-color: rgba($color: #000000, $alpha: .9);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle::after {
+    content: "";
+    position: inherit;
+    top: -50vmin;
+    right: -50vmin;
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    z-index: inherit;
+    background-color: rgba($color: #c24d2c, $alpha: .9);
+}

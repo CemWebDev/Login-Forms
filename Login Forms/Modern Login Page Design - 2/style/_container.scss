@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,300;1,400&family=Outfit:wght@400;700&family=Overpass:ital@1&family=Pacifico&family=Poppins:wght@100;300;400;500&family=Roboto+Condensed&display=swap');
+
+$container: rgba( 169, 48, 48, 0.2 );
+$facebook: rgb(24, 119, 242);
+$twitter: #1DA1F2;
+$telegram: 	#0088cc;
+$error: #f00;
+$button: #c24d2c;
+$white: #fff;
+$black: #000;
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 3.25rem;
+    border-radius: 10px;
+    background: $container;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1.5px );
+    font-family: "Poppins", sans-serif;
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.container > header {
+    @include center();
+    width: 100%;
+    height: 15vmin;
+    > .logo {
+        @include center();
+        cursor: pointer;
+        background-color: $white;
+        width: 8vmin;
+        height: 8vmin;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba($color: #000000, $alpha: 0.8);
+        > span {
+            font-size: 3.5vmin;
+        }
+    }
+}
+
+.container > .input-part {
+    display: flex;
+    flex-direction: column;
+    padding: 1vmin 4vmin;
+    gap: 2vmin;
+    > input {
+        background-color: #ddd;
+        padding: 1vmin 2.5vmin;
+        border-radius: 2rem;
+        &:focus {
+            background-color: $white;
+            &::placeholder{
+                transition: 0.2s;
+                font-size: 1.4vmin;
+                letter-spacing: .5px;
+            }
+        }
+    }
+}
+
+.container > .options-part {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    :where(label, a){
+        font-size: .8rem;
+    }
+    > .remember-me {
+        display: flex;
+        gap: 1vmin;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+    }
+    > .forgot-password > a {
+        color: $white;
+    }
+}
+
+.container > .button {
+    padding: 2.5vmin 4vmin;
+    text-align: center;
+    button {
+        width: 100%;
+        padding: 1.5vmin 2vmin;
+        border-radius: 2rem;
+        background: $button;
+        border: 1px solid $button;
+        color: $white;
+        font-size: 2.3vmin;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.separator {
+    text-align: center;
+    padding: 2vmin 0 .5vmin 0;
+    > small {
+        color: $white
+    }
+}
+
+.container > .media-icons {
+    @include center();
+    padding: 2vmin;
+    gap: 3vmin;
+}
+
+.container > .media-icons > a {
+    transition: 0.2s;
+    padding: 2vmin;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    text-decoration: none;
+    font-size: 3vmin;
+    &:first-child {
+        color: $facebook;
+    }
+    &:nth-child(2) {
+        color: $twitter;
+    }
+    &:last-child {
+        color: $telegram;
+    }
+    &:hover {
+        transform: scale(.9) translateY(-1.5vmin);
+    }
+}
+
+.error {
+    border: 2px solid $error
+}
+
+.spinner {
+    animation: spinner .2s linear;
+}
+
+@keyframes spinner {
+    0%   {
+        transform: rotate(0deg) scale(1);
+    };
+    100% {
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        padding: 2.25rem;
+        > .button > .button {
+            font-size: 2.2vmin;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 1.75rem;
+        > .input-part {
+            gap: 3vmin;
+            > input {
+                font-size: 3.5vmin;
+                &:focus {
+                    &::placeholder {
+                        font-size: 2vmin;
+                    }
+                }
+            }
+        }
+    }
+}

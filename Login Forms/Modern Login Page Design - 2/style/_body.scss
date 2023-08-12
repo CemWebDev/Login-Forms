@@ -1,0 +1,18 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin body_features {
+    min-height: 100vh;
+    padding: 1.25rem;
+    user-select: none;
+    // background: #ff847c    
+    background-color: #3baea0
+}  
+
+body {
+    @include center();
+    @include body_features();
+}

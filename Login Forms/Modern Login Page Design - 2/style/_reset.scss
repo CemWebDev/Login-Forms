@@ -1,0 +1,20 @@
+$reset: 0;
+
+*, *::before, *::after {
+    margin: $reset;
+    padding: $reset;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+@mixin form_reset {
+    border: $reset;
+    outline: $reset;
+}
+
+:where(input, button) {
+    @include form_reset();
+}

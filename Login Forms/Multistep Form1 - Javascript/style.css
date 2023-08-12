@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --body-background-color: #e7eaf6;
+    --button-background-color: #38598b;
+    --success-color: rgb(0, 170, 0);
+    --error-color: rgb(190, 0, 0);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 1px);
+    background-color: var(--body-background-color);
+    font-family: "Outfit", sans-serif;
+    padding: 10px auto;
+}
+
+header{
+    position: absolute;
+    top: 5%;
+    text-align: center;
+}
+
+
+input,
+button{
+    width: 300px;
+    height: 35px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.container  button{
+    text-align: start;
+    margin: 10px auto;  
+    background-color: var(--button-background-color);
+    color: var(--body-background-color);
+    cursor: pointer;
+}
+
+.container button:hover{
+    opacity: 0.8;
+}
+
+.container .name h2,
+.container .password h2{
+    text-align: center;
+    margin: 30px auto;
+    color: var(--success-color);
+}
+
+.container .social-media-buttons{
+    text-align: center;
+}
+
+.container #github-button{
+    background-color: #333;
+}
+
+.container #instagram-button{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+
+.container #spotify-button{
+    color: #191414;
+    background-color: #1DB954;
+}
+
+.container .notification{
+    display: none;
+    text-align: center;
+}
+
+.notification h2{
+    color: var(--success-color);
+}
+
+.notification h3{
+    background-color: var(--success-color);
+    color: var(--body-background-color);
+    width: 120px;
+    padding: 8px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.password #valid-content{
+    display: none;
+}
+
+.complete-button{
+    background-color: var(--success-color) !important;
+    color: var(--body-background-color);
+    display: none;
+}
+
+.notification button{
+    background-color: var(--success-color) !important;
+}
+
+.notification button:hover{
+    background-color: var(--button-background-color) !important;
+}
+
+.password{
+    display: none;
+}
+
+.name-error{
+    border: 2px solid var(--error-color);
+}
+
+.name-error-text-style{
+    color: var(--error-color);
+}
+
+.password-error-text-style{
+    color: var(--error-color);
+}
+
+.password-error{
+    border: 2px solid var(--error-color);
+}
+
+.password-success-text-style{
+    color: var(--success-color);
+}
+
+.password-success{
+    border: 2px solid var(--success-color);
+}
+
+.password-button-first-warning:hover{
+    opacity: 1;
+}
+
+.password-disabled-button{
+    opacity: 0.5;
+}
+
+
+#github-header,
+#instagram-header,
+#spotify-header{
+    display: none;
+} 
+
+.github-container,
+.instagram-container,
+.spotify-container{
+    display: none;
+    text-align: center;
+}
+
+.github-container button,
+.instagram-container button,
+.spotify-container button{
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.github-container button:hover,
+.instagram-container button:hover,
+.spotify-container button:hover{
+    opacity: 0.8;
+}
+
+.github-container #github-login button{
+    background-color: var(--error-color);
+    color: #fff;
+}
+
+.github-container input,
+.instagram-container input,
+.spotify-container input{
+    margin: 10px;
+}
+
+.github-container #github-login #github-note{
+    text-align: start;
+    color: #fff;
+}
+
+.instagram-container #instagram-note,
+.spotify-container #spotify-note{
+    text-align: center;
+    color: #222;
+}
+
+.instagram-container #instagram-login-button{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    color: #fff;
+}
+
+.spotify-container #spotify-login-button{
+    background-color: #1DB954;
+    color: #191414;
+}
+
+/*
+!Social Media styles for javascript
+*/
+
+.complete-button-github,
+.complete-button-instagram,
+.complete-button-spotify{
+    display: none;
+    text-align: center;
+}
+
+.complete-button-github button,
+.complete-button-instagram button,
+.complete-button-spotify button{
+    background-color: var(--success-color) !important;
+}
+
+.complete-button-instagram button{
+    color: #ffffff;
+}
+.complete-button-spotify button{
+    color: #ffffff;
+}
+
+.github-username-text,
+.github-password-text,
+.instagram-username-text,
+.instagram-password-text,
+.spotify-username-text,
+.spotify-password-text{
+    text-align: start;
+}
+
+.github-username-error,
+.github-password-error,
+.instagram-username-error,
+.instagram-password-error,
+.spotify-error{
+    border: 2px solid var(--error-color);
+}
+
+.github-username-error-style,
+.github-password-error-style,
+.instagram-username-error-style,
+.instagram-password-error-style,
+.spotify-error-text-style{
+    color: var(--error-color);
+}
+
+.github-username-success-style,
+.github-password-success-style,
+.instagram-username-success-style,
+.instagram-password-success-style,
+.spotify-success-text-style{
+    color: var(--success-color) !important;
+}
+
+.github-username-success,
+.github-password-success,
+.instagram-username-success,
+.instagram-password-success,
+.spotify-success{
+    border: 2px solid var(--success-color);
+}
+
+.last-container{
+    display: none;
+}
+
+.last-container h2{
+    color: #222;
+}
+.attribute{
+    position: absolute;
+    bottom: 5%;
+}
+
+.attribute a{
+    color: var(--error-color);
+    text-decoration: none;
+}
+
+.attribute span{
+    color: rgb(146, 49, 49);
+}
+
+.attribute a:hover{
+    opacity: 0.8;
+}
+
+@media (max-width: 768px){
+    input,
+    button{
+        width: 200px;
+    }
+}
+
+

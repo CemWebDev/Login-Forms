@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login Form || Vanilla Javascript</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <div class="circle"></div>
+        <div class="hot-effect"></div>
+        <div class="hot-effect-1"></div>
+        <div class="hot-effect-2"></div>
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <span 
+                    class="fa-solid fa-user"
+                    id="user-icon">
+                    </span>
+                </div>
+            </header>
+            <div class="input-part">
+                <input type="text" name="username" id="username" placeholder="username" maxlength="15" spellcheck="false">
+                <input type="password" name="password" id="password" placeholder="password" maxlength="25" spellcheck="false">
+            </div>
+            <div class="options-part">
+                <div class="remember-me">
+                    <input type="checkbox" 
+                    id="remember-button">
+                    <label for="remember-button">Remember me</label>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit"
+                id="login-button">
+                    Login
+                </button>
+            </div>
+            <div class="separator">
+                <small>Or Sign In Using</small>
+            </div>
+            <div class="media-icons">
+                <a href="#" class="fa-brands fa-facebook" id="facebook"></a>
+                <a href="#" class="fa-brands fa-twitter"></a>
+                <a href="#" class="fa-brands fa-telegram"></a>
+            </div>
+        </div>
+    </main>
+    <script src="/src/script.js"></script>
+</body>
+</html>
