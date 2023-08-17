@@ -36,35 +36,6 @@ const validateInput = () => {
 } 
 
 
-
-// form.addEventListener("submit", (e) => {
-//     if (nameInput.value.length >= 3) {
-//         nameInput.classList.add("success");
-//     }
-//     else{
-//         nameInput.classList.remove("success");
-//         nameInput.classList.add("error");
-//     }
-//     e.preventDefault();
-    
-// })
-
-// form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-// })
-
-// form.addEventListener("submit", (e) => {
-//     if (password.value.length > 8) {
-//         password.classList.add("success");
-//     } else {
-//         password.classList.remove("success");
-//         password.classList.add("error");
-//     }
-//     e.preventDefault
-// })
-
-
-//? Their position may change.
 const toggleIcon = document.getElementById("themeIcon");
 const body = document.querySelector("body");
 const container = document.querySelector(".container");
